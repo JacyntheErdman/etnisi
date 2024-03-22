@@ -1,0 +1,55 @@
+{
+  "name": "etnisi",
+  "version": "1.0.0",
+  "description": "API client for coveralls.io",
+  "license": "MIT",
+  "author": "JaunitaSchaefer",
+  "homepage": "https://github.com/JacyntheErdman/etnisi.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JacyntheErdman/etnisi.git"
+  },
+  "keywords": [
+    "coveralls",
+    "coveralls.io",
+    "api",
+    "enim",
+    "aut",
+    "odit",
+    "animi",
+    "quae",
+    "ullam",
+    "at"
+  ],
+  "files": [
+    "build"
+  ],
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "bob build",
+    "commit": "bob commit",
+    "lint": "bob lint",
+    "postversion": "git push --follow-tags",
+    "prepublishOnly": "yarn run lint && yarn run build && yarn run test",
+    "test": "bob test"
+  },
+  "dependencies": {
+    "cross-fetch-json": "^1.1.2",
+    "stringify-json-object": "^1.0.5"
+  },
+  "devDependencies": {
+    "@bconnorwhite/bob": "^2.5.2",
+    "dotenv": "^8.2.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-bob"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "bob commit lint"
+    }
+  },
+  "npmpackagejsonlint": {
+    "extends": "npm-package-json-lint-config-bob"
+  }
+}
